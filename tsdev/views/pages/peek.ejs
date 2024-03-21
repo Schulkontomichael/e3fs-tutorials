@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <div>
+            <p>Hier die erste Queue</p>
+            <p><%= typeof peek != 'undefined' ? peek: 'leer' %></p>
+        </div>
+        <div>
+            <form action="/queue/dequeue">
+                <input type="submit" value="dequeue" />
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

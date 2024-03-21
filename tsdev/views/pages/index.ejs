@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <!-- <h1>This is great</h1>
+        <p>Welcome to templating using EJS</p> 
+        <h2>Variable</h2>
+        <p><%= tagline %></p>
+        <ul>
+            <% mascots.forEach(function(mascot) { %>
+                <li>
+                    <strong><%= mascot.name %></strong>
+                    representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+                </li>
+            <% }); %>
+        </ul> -->
+        <form action="/queue/enqueue" method="POST">
+            <label for="enqueue">Queue: </label>
+            <input type="text" id="value" name="value"><br><br>
+            <input type="submit" value="enqueue">
+        </form>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
